@@ -11,6 +11,8 @@ django-tables2 = "*"
 gunicorn = "==19.9.0"
 whitenoise = "*"
 django-heroku = "*"
+psycopg2-binary = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
