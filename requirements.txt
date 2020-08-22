@@ -4,3 +4,8 @@ django-tables2==2.3.1
 gunicorn==19.9.0
 pytz==2020.1
 sqlparse==0.3.1
+dj-database-url==version
+psycopg2==version
+psycopg2-binary==version
+pytz==version	
+whitenoise==version
