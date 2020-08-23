@@ -6,8 +6,11 @@ from django.urls import reverse_lazy
 class HomePageView(FormView):
 	form_class = ContactForm
 	template_name = 'index.html'
-	success_url = '/'
+	success_url = 'thanks'
 
 class ListPageView(ListView):
 	model = List
 	template_name = 'list.html'
+
+class Thanks(TemplateView):
+	template_name = 'thanks.html' 
