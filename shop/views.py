@@ -14,13 +14,16 @@ class HomePageView(TemplateView, FormView):
 			name=form.cleaned_data.get('name'),
 			email=form.cleaned_data.get('email'))
 	    message+= "\n\n{0}".format(form.cleaned_data.get('message'))
-
-	    send_mail(
+	    try:
+	    	send_mail(
 	        subject=form.cleaned_data.get('subject'),
 	        message=message,
 	        from_email=form.cleaned_data.get('email'),
 	        recipient_list=[settings.LIST_OF_EMAIL_RECIPIENTS],
 	    )
+	    except Exception as e:
+	    	print(e)
+
 	    return redirect('/')
 
 
