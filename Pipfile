@@ -13,6 +13,8 @@ whitenoise = "*"
 django-heroku = "*"
 psycopg2-binary = "*"
 psycopg2 = "*"
+django-crispy-forms = "*"
+django-floppyforms = "*"
 
 [requires]
 python_version = "3.8"

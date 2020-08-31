@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop.apps.ShopConfig',
-]
+    'crispy_forms',
+    'floppyforms',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,12 +127,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 django_heroku.settings(locals())
 
-
-#gmail_send/settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
 EMAIL_HOST_USER = 'lordareello@gmail.com'
 EMAIL_HOST_PASSWORD = 'endowed000000007'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-    
-
+LIST_OF_EMAIL_RECIPIENTS = EMAIL_HOST_USER
