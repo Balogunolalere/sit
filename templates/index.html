@@ -1,5 +1,4 @@
 {% load static %}
-{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,22 +128,33 @@ https://templatemo.com/tm-504-page-one
                 <div class="tm-page-content-width">
                     <div class="tm-translucent-white-bg tm-textbox tm-content-box tm-textbox-full-height">
                         <h2 class="tm-section-title tm-red-text">Contact Us</h2>
-                        <p>Have more questions, request a quote.</p>
+                        <p>At sit and shop africa we are ever ready to receive your feedback and suggestions.
+                         <br> <br>request a quote.</p>
                         
                         <!-- contact form -->
+                        
                         <form action="{% url 'home' %}" method="post" class="tm-contact-form">
                             {% csrf_token %}
-                            <div class="form-group">
-                                {{form.as_p}}
-                            <button type="submit" class="tm-btn">Submit</button>
+                            <div class="form-group">                                                        
+                                <input type="subject" id="contact_subject" name="subject" class="form-control" placeholder="Subject"  required/>
                             </div>
+                            <div class="form-group">
+                                <input type="text" id="contact_name" name="name" class="form-control" placeholder="Name"  required/>
+                            </div>
+                            <div class="form-group">                                                        
+                                <input type="email" id="contact_email" name="email" class="form-control" placeholder="Email"  required/>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="contact_message" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="tm-btn">Submit</button>
                         </form>  
                     </div>
                 </div>
                 <div class="tm-copyright-div">
-                    <p class="tm-copyright-text">Copyright &copy; <span class="tm-current-year">2020</span> Aldoj 
+                    <p class="tm-copyright-text">Copyright &copy; <span class="tm-current-year">2020</span> Aldoj Amazing Consult
                     
-                    </p>
+                    - Design: Bandersnatchx86</p>
                 </div>                
             </section>
         </div>
